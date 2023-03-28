@@ -4,6 +4,7 @@ let gridNumber = 16;
 let grid = 0;
 let rainbow = 0;
 
+
 function makeGrid() {
   document.querySelector(
     "#change-grid"
@@ -25,11 +26,9 @@ function makeGrid() {
   makeEventListeners();
   grid = 1;
 }
-
 makeGrid();
 
-// eventlistener for hover and change colour callback function inside
-
+// Make event listeners to change the grid colour, or enable the eraser
 function makeEventListeners() {
   let squares = [...document.querySelectorAll(".square")];
   squares.forEach((square) => {
@@ -46,13 +45,13 @@ function makeEventListeners() {
   });
 }
 
-// Eraser enable/disable button
+// Eraser button
 let eraseButton = document.querySelector("#eraser");
 eraseButton.addEventListener("click", () => {
   eraser = (eraser + 1) % 2;
 });
 
-// Grid layout change
+// Grid layout change button
 let btn = document.querySelector("#change-grid");
 btn.addEventListener("click", () => {
   let newGridNumber = parseInt(
@@ -70,14 +69,14 @@ btn.addEventListener("click", () => {
   }
 });
 
+// Helper function to get rid of the current grid 
 function removeContainerChildren() {
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
 }
 
-// Makes rainbow colours
-
+// Random colour generator
 let getRainbow = () => {
   let red = Math.floor(Math.random() * 256);
   let green = Math.floor(Math.random() * 256);
@@ -85,6 +84,7 @@ let getRainbow = () => {
   return `rgb(${red},${green}, ${blue})`;
 };
 
+// Rainbow button
 let rainbowButton = document.querySelector('#rainbow');
 rainbowButton.addEventListener('click', () => {
     rainbow = (rainbow + 1) % 2;

@@ -11,7 +11,7 @@ h1 {
 .big-square {
     flex: 1;
     display:flex;
-    width: 960px;
+    width: 840px;
     height: auto;
     justify-content: center;
     align-items: center;
