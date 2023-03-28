@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+}
+.container {
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-square {
+    flex: 1;
+    display:flex;
+    width: 960px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.square {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+    border: 1px solid black;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.btn-special {
+    margin: 0 16px;
+}
